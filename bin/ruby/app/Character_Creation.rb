@@ -27,11 +27,4 @@ def processing
       $selection = nil
     end
   end
-  
-def getClassData(class_name)
-  File.readlines("texts/#{class_name}") |x| 
-    while x != "#~#" do
-      x[/STR_______./]
-    end
-end
 end

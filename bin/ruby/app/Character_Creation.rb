@@ -8,14 +8,13 @@ def ccStart
   while confirmation == false do
     selection = gets.chomp.downcase
     if selection == "brute" || selection == "ranger" || selection == "warrior" || selection == "wizard"
-      text_print("#{selection}.txt")
+      text_print("class_#{selection}.txt")
       puts "to confirm your choice, please type 'confirm', else type another class to view"
       if gets.chomp.downcase == "confirm"
-        pClass = selection
+        return selection
       end
     else
       puts "this is not a valid class. please enter: brute, ranger, warrior or wizard."
     end
   end
-  return pClass
 end

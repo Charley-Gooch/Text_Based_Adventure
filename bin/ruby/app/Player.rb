@@ -8,7 +8,7 @@ class Player < Entity
   @pChestpiece = nil
   @pLeggings = nil
   
-  def initialize(pClass, eName, eHealth, eResourse, eResourseCount, eStr, eCon, eAgi, eInt, eCha)
+  def self.initialize(pClass, eName, eHealth, eResourse, eResourseCount, eStr, eCon, eAgi, eInt, eCha)
     @pClass = pClass
     super(eName, eHealth, eResourse, eResourseCount, eStr, eCon, eAgi, eInt, eCha)
   end

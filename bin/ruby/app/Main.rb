@@ -3,14 +3,15 @@ require_relative "Character_Creation"
 require_relative "Player"
 
 def main()
-  #ccStart()
+  ccStart()
   #player = Player.new
   #player.initialize()
-  getClassData()
+  #getClassData("brute")
 end
 
-def getClassData()
-  File.foreach("texts/class_wizard.txt").find do |line|
+def getClassData(class_name)
+  @class_name = class_name
+  File.foreach("texts/class_#{@class_name}.txt").find do |line|
     if line[0] == '+' || line[0] == '-' || line[0] == '='
       puts line
     end

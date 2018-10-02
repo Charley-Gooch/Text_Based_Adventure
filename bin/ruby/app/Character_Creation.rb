@@ -26,4 +26,11 @@ def processing
       puts "this is not a valid class. please enter: brute, ranger, warrior or wizard."
     end
   end
+  
+def getClassData(class_name)
+  File.readlines("texts/#{class_name}") |x| 
+    while x != "#~#" do
+      x[/STR_______./]
+    end
+end
 end
